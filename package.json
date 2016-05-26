@@ -1,0 +1,29 @@
+{
+  "name": "bit-docs-process-tags",
+  "version": "0.0.1",
+  "description": "Processes @tags",
+  "main": "process-tags.js",
+  "scripts": {
+    "test": "mocha test.js --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bit-docs/bit-docs-process-tags.git"
+  },
+  "keywords": [
+    "bit-docs",
+    "donejs"
+  ],
+  "author": "Bitovi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bit-docs/bit-docs-process-tags/issues"
+  },
+  "homepage": "https://github.com/bit-docs/bit-docs-process-tags#readme",
+  "dependencies": {
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
+    "mocha": ">= 1.18.0"
+  }
+}

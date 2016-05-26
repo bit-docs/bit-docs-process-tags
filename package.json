@@ -1,17 +1,16 @@
 {
   "name": "bit-docs-process-tags",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Processes @tags",
   "main": "process-tags.js",
   "scripts": {
     "test": "mocha test.js --reporter spec",
-    "postversion": "git push --tags && git checkout master && git branch -D release && git push",
+    "postversion": "git push --tags && git push",
     "preversion": "npm test",
     "release:pre": "npm version prerelease && npm publish",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
-    "release:major": "npm version major && npm publish",
-    "version": "git commit -am \"Update dist for release\" && git checkout -b release"
+    "release:major": "npm version major && npm publish"
   },
   "repository": {
     "type": "git",

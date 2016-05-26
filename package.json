@@ -1,6 +1,6 @@
 {
   "name": "bit-docs-process-tags",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Processes @tags",
   "main": "process-tags.js",
   "scripts": {

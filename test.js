@@ -1,3 +1,5 @@
+require("./tags/_default_test");
+
 var assert = require("assert"),
 	fs = require("fs"),
 	path = require("path"),

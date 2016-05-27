@@ -1,4 +1,5 @@
-var _ = require("lodash");
+var _ = require("lodash"),
+	defaultTags = require("./tags/tags");
 
 var	doubleAt = /@@/g,
 	matchTag = /^\s*@(\w+)/,
@@ -26,13 +27,14 @@ var	doubleAt = /@@/g,
  *
  * The processing rules can be found in the [documentjs.Tag Tag interface].
  */
+
 module.exports = function(options, addDocObjectToDocMap){
 
 	var docObject = options.docObject || {},
 		comment = options.content || options.comment,
 		docMap = options.docMap,
 		scope = options.scope,
-		tags = options.tags || defaultTags;
+		tags = _.defaults(options.tags || {}, defaultTags);
 
 
 	var i = 0,

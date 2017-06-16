@@ -1,6 +1,6 @@
 /**
- * @constructor documentjs.tags.description @description
- * @parent documentjs.tags
+ * @parent bit-docs-process-tags/tags
+ * @module {bit-docs-js/tag} bit-docs-process-tags/tags/description @description
  * 
  * @description 
  * 
@@ -8,22 +8,23 @@
  * 
  * @signature `@description`
  * 
- * Content after the `@description` tag appears after 
- * the title, but before signature and API content.
+ * Content after the `@description` tag appears after the title, but before
+ * signature and API content.
  * 
- * `@description` tag content is treated as markdown and set as 
- * the [documentjs.process.docObject]'s `description` property.
+ * `@description` tag content is treated as markdown and set as the
+ * [bit-docs/types/docObject docObject]'s `description` property.
  * 
  * @body
  * 
  * ## Use
  * 
- * The description of a [documentjs.process.docObject] is displayed at the top
- * of an html page generated with 
- * the [documentjs.generators.html default html generator].  
+ * The description of a [bit-docs/types/docObject docObject] is displayed at
+ * the top of an html page generated with the
+ * [bit-docs-generate-html default html generator].
  * 
- * In the following example, `@description` stops content from being added to [documentjs.tags.param],
- * and instead makes content be added to the description property.
+ * In the following example, `@description` stops content from being added to
+ * [bit-docs-js/tags/param], and instead makes content be added to the
+ * description property.
  * 
  * @codestart javascript
  * /**
@@ -36,12 +37,13 @@
  * lib.Component = function(name){}
  * @codeend
  * 
- * By default
- * the first paragraph of content that is not after a multi-line tag like [documentjs.tags.signature],
- * [documentjs.tags.param], etc, is set as the [documentjs.tags.description].  All content
- * after the first paragraph is set as the body content.
+ * By default the first paragraph of content that is not after a multi-line tag
+ * like [bit-docs-js/tags/signature], [bit-docs-js/tags/param], etc, is set as
+ * the [bit-docs-process-tags/tags/description]. All content after the first
+ * paragraph is set as the body content.
  * 
- * You can see what is treated as description and body by default in the following example:
+ * You can see what is treated as description and body by default in the
+ * following example:
  * 
  * @codestart javascript
  * /**
@@ -63,9 +65,6 @@
  *  *|
  * Graph.prototype.cols = function(cols){ ... }
  * @codeend
- * 
- * 
- * 
  */
 module.exports = {
 	add: function( line ) {

@@ -12,14 +12,14 @@
  * signature and API content.
  * 
  * `@description` tag content is treated as markdown and set as the
- * [bit-docs/types/docObject docObject]'s `description` property.
+ * [bit-docs/types/docObject]'s `description` property.
  * 
  * @body
  * 
  * ## Use
  * 
- * The description of a [bit-docs/types/docObject docObject] is displayed at
- * the top of an html page generated with the
+ * The description of a [bit-docs/types/docObject] is displayed at the top of
+ * an html page generated with the
  * [bit-docs-generate-html default html generator].
  * 
  * In the following example, `@description` stops content from being added to

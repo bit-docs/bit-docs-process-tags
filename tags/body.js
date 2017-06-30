@@ -15,13 +15,13 @@ var endHTMLComment = /\s*-->/;
  * signature and API content.
  * 
  * `@body` tag content is treated as markdown and set as the
- * [bit-docs/types/docObject docObject]'s `body` property.
+ * [bit-docs/types/docObject]'s `body` property.
  * 
  * @body
  * 
  * ## Use
  * 
- * The body of a [bit-docs/types/docObject docObject] is displayed at the
+ * The body of a [bit-docs/types/docObject] is displayed at the
  * bottom of an html page generated with the
  * [bit-docs-generate-html default html generator].
  * 

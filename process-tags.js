@@ -4,22 +4,22 @@ var _ = require("lodash"),
 var	doubleAt = /@@/g,
 	matchTag = /^\s*@(\w+)/,
 	matchSpace = /^\s*/;
+
 /**
- * @function documentjs.process.comment
- * @parent documentjs.process.methods
+ * @parent bit-docs-process-tags/modules
+ * @module {function} bit-docs-process-tags/process-tags processTags
  *
- * @signature `documentjs.process.comment(options, callback)`
+ * @signature `processTags(options, callback)`
  *
- * Processes a comment and produces a docObject.
+ * Processes a comment and produces a docObject from the tags found.
  *
- * @param {documentjs.process.processOptions} options An options object that contains
- * the code and comment to process.
+ * @param {bit-docs/types/processOptions} options An options object that
+ * contains the code and comment to process.
  *
- * @param {function(documentjs.process.docObject,documentjs.process.docObject)} callback(newDoc,newScope)
+ * @param {function(bit-docs/types/docObject,bit-docs/types/docObject)} callback(newDoc,newScope)
  *
- * A function that is called back with a docObject created from the code and the scope
- * `docObject`.  If
- * no docObject is created, `newDoc` will be null.
+ * A function that is called back with a docObject created from the code and
+ * the scope `docObject`. If no docObject is created, `newDoc` will be null.
  *
  * @body
  *
@@ -27,7 +27,6 @@ var	doubleAt = /@@/g,
  *
  * The processing rules can be found in the [documentjs.Tag Tag interface].
  */
-
 module.exports = function(options, addDocObjectToDocMap){
 
 	var docObject = options.docObject || {},
@@ -35,7 +34,6 @@ module.exports = function(options, addDocObjectToDocMap){
 		docMap = options.docMap,
 		scope = options.scope,
 		tags = _.defaults(options.tags || {}, defaultTags);
-
 
 	var i = 0,
 		lines = typeof comment == 'string' ? comment.split("\n") : comment,

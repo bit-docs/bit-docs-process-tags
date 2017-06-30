@@ -2,8 +2,8 @@
  * @parent bit-docs-process-tags/tags
  * @module {bit-docs-js/tag} bit-docs-process-tags/tags/parent @parent
  * 
- * Specifies the parent [bit-docs/types/docObject docObject]'s name. The
- * current docObject will be displayed under the the parent in the navigation.
+ * Specifies the parent [bit-docs/types/docObject]'s name. The current
+ * docObject will be displayed under the the parent in the navigation.
  * 
  * @signature `@parent NAME`
  * 
@@ -16,8 +16,7 @@
  *  $.Drag = function(){}
  * @codeend
  * 
- * @param {String} NAME The name of the parent
- * [bit-docs/types/docObject docObject].
+ * @param {String} NAME The name of the parent [bit-docs/types/docObject].
  * 
  * @body
  * 

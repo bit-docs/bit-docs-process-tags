@@ -2,6 +2,7 @@
  * @parent plugins
  * @module {function} bit-docs-process-tags
  * @group bit-docs-process-tags/tags tags
+ * @group bit-docs-process-tags/modules modules
  *
  * @description Processes tags for a docMap.
  *

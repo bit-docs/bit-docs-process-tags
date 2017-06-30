@@ -4,12 +4,12 @@
  * 
  * @description 
  * 
- * Sets a [bit-docs/types/docObject docObject] as the current scope.
+ * Sets a [bit-docs/types/docObject] as the current scope.
  * 
  * @signature `@add NAME`
  * 
- * @param {STRING} NAME The name of [bit-docs/types/docObject docObject] to set
- * as the scope.
+ * @param {STRING} NAME The name of [bit-docs/types/docObject] to set as the
+ * scope.
  * 
  * @body
  * 

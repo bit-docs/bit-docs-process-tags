@@ -30,8 +30,8 @@
  *  *|
  * @codeend
  * 
- * This a `hideSection` property to [bit-docs/types/docObject docObject] where
- * `Section` is the capitalized `SECTION` name passed to `@hide`.
+ * This a `hideSection` property to [bit-docs/types/docObject] where `Section`
+ * is the capitalized `SECTION` name passed to `@hide`.
  */
 module.exports = {
 	add: function( line ) {

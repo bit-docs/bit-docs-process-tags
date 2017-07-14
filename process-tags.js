@@ -1,31 +1,32 @@
-var _ = require("lodash"),
-	defaultTags = require("./tags/tags");
+var _ = require("lodash");
+var defaultTags = require("./tags/tags");
 
-var	doubleAt = /@@/g,
-	matchTag = /^\s*@(\w+)/,
-	matchSpace = /^\s*/;
+var doubleAt = /@@/g;
+var matchTag = /^\s*@(\w+)/;
+var matchSpace = /^\s*/;
 
 /**
  * @parent bit-docs-process-tags/modules
- * @module {function} bit-docs-process-tags/process-tags processTags
+ * @module {function} bit-docs-process-tags/process-tags
  *
  * @signature `processTags(options, callback)`
  *
- * Processes a comment and produces a docObject from the tags found.
+ * Processes a comment and produces a [bit-docs/types/docObject] from the tags
+ * found.
  *
  * @param {bit-docs/types/processOptions} options An options object that
  * contains the code and comment to process.
  *
  * @param {function(bit-docs/types/docObject,bit-docs/types/docObject)} callback(newDoc,newScope)
  *
- * A function that is called back with a docObject created from the code and
- * the scope `docObject`. If no docObject is created, `newDoc` will be null.
+ * A function that is called back with a [bit-docs/types/docObject] created from the code and
+ * the scope `docObject`. If no [bit-docs/types/docObject] is created, `newDoc` will be null.
  *
  * @body
  *
  * ## Processing rules
  *
- * The processing rules can be found in the [documentjs.Tag Tag interface].
+ * The processing rules can be found in the [bit-docs/types/tag Tag interface].
  */
 module.exports = function(options, addDocObjectToDocMap){
 

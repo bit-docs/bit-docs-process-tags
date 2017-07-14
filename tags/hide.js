@@ -1,6 +1,6 @@
 /**
  * @parent bit-docs-process-tags/tags
- * @module {bit-docs-js/tag} bit-docs-process-tags/tags/hide @hide
+ * @module {bit-docs/types/tag} bit-docs-process-tags/tags/hide @hide
  * 
  * Hides the comment from the navigation.
  * 
@@ -30,8 +30,8 @@
  *  *|
  * @codeend
  * 
- * This a `hideSection` property to [bit-docs/types/docObject] where `Section`
- * is the capitalized `SECTION` name passed to `@hide`.
+ * This adds a `hideSection` property to [bit-docs/types/docObject] where
+ * `Section` is the capitalized `SECTION` name passed to `@hide`.
  */
 module.exports = {
 	add: function( line ) {

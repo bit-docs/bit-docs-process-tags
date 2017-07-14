@@ -1,6 +1,6 @@
 /**
  * @parent bit-docs-process-tags/tags
- * @module {bit-docs-js/tag} bit-docs-process-tags/tags/parent @parent
+ * @module {bit-docs/types/tag} bit-docs-process-tags/tags/parent @parent
  * 
  * Specifies the parent [bit-docs/types/docObject]'s name. The current
  * docObject will be displayed under the the parent in the navigation.

@@ -1,6 +1,6 @@
 /**
  * @parent bit-docs-process-tags/tags
- * @module {bit-docs-js/tag} bit-docs-process-tags/tags/add @add
+ * @module {bit-docs/types/tag} bit-docs-process-tags/tags/add @add
  * 
  * @description 
  * 
@@ -21,9 +21,9 @@
  * not have to write out a full name and [bit-docs-process-tags/tags/parent]
  * tag.
  * 
- * In the following example, a docObject named `lib.Component.prototype.plugin`
- * and `lib.Component.prototype.draw` will be created, each with
- * `lib.Component.prototype` as their parent.
+ * In the following example, a [bit-docs/types/docObject] named
+ * `lib.Component.prototype.plugin` and `lib.Component.prototype.draw` will be
+ * created, each with `lib.Component.prototype` as their parent.
  * 
  * @codestart javascript
  * /** @@add lib.Component.prototype *|

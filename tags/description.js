@@ -1,6 +1,6 @@
 /**
  * @parent bit-docs-process-tags/tags
- * @module {bit-docs-js/tag} bit-docs-process-tags/tags/description @description
+ * @module {bit-docs/types/tag} bit-docs-process-tags/tags/description @description
  * 
  * @description 
  * 
@@ -20,7 +20,8 @@
  * 
  * The description of a [bit-docs/types/docObject] is displayed at the top of
  * an html page generated with the
- * [bit-docs-generate-html default html generator].
+ * [bit-docs-generate-html default html generator]. It also appears in the
+ * `title` attribute of links.
  * 
  * In the following example, `@description` stops content from being added to
  * [bit-docs-js/tags/param], and instead makes content be added to the

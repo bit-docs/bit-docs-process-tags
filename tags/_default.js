@@ -6,7 +6,7 @@ var _ = require('lodash');
 /**
  * @hide
  * @parent bit-docs-process-tags/tags
- * @module {bit-docs-js/tag} bit-docs-process-tags/tags/_default @_default
+ * @module {bit-docs/types/tag} bit-docs-process-tags/tags/_default @_default
  *
  * The default tag behavior when `@TAG` begins a line, but no tag is defined
  * for `TAG`.

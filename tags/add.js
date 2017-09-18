@@ -1,31 +1,29 @@
-
 /**
- * @constructor documentjs.tags.add @add 
- * @parent documentjs.tags
+ * @parent bit-docs-process-tags/tags
+ * @module {bit-docs-process-tags/types/tag} bit-docs-process-tags/tags/add @add
  * 
  * @description 
  * 
- * Sets a [documentjs.process.docObject] as the 
- * current scope. 
+ * Sets a [bit-docs/types/docObject] as the current scope.
  * 
  * @signature `@add NAME`
  * 
- * @param {STRING} NAME The name of [documentjs.process.docObject]
- * to set as the scope.
+ * @param {STRING} NAME The name of [bit-docs/types/docObject] to set as the
+ * scope.
  * 
  * @body
  * 
  * ## Use
  * 
- * [documentjs.tags.function]
- * or [documentjs.tags.property] tags created
- * without a name, or with a "short name" will use the current
- * scope to guess their full name and parent. `@add` can set the scope,
- * allowing comments to not have to write out a full name and [documentjs.tags.parent] tag.
+ * [bit-docs-js/tags/function] or [bit-docs-js/tags/property] tags created
+ * without a name, or with a "short name" will use the current scope to guess
+ * their full name and parent. `@add` can set the scope, allowing comments to
+ * not have to write out a full name and [bit-docs-process-tags/tags/parent]
+ * tag.
  * 
- * In the following example, a docObject named `lib.Component.prototype.plugin`
- * and `lib.Component.prototype.draw` will be created, each with `lib.Component.prototype`
- * as their parent.
+ * In the following example, a [bit-docs/types/docObject] named
+ * `lib.Component.prototype.plugin` and `lib.Component.prototype.draw` will be
+ * created, each with `lib.Component.prototype` as their parent.
  * 
  * @codestart javascript
  * /** @@add lib.Component.prototype *|

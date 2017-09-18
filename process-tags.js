@@ -1,33 +1,49 @@
-var _ = require("lodash"),
-	defaultTags = require("./tags/tags");
+var _ = require("lodash");
+var defaultTags = require("./tags/tags");
 
-var	doubleAt = /@@/g,
-	matchTag = /^\s*@(\w+)/,
-	matchSpace = /^\s*/;
+var doubleAt = /@@/g;
+var matchTag = /^\s*@(\w+)/;
+var matchSpace = /^\s*/;
+
 /**
- * @function documentjs.process.comment
- * @parent documentjs.process.methods
+ * @parent bit-docs-process-tags/modules
+ * @module {function} bit-docs-process-tags/process-tags
  *
- * @signature `documentjs.process.comment(options, callback)`
+ * @signature `processTags(options, callback)`
  *
- * Processes a comment and produces a docObject.
+ * Use this module to process a [bit-docs-process-tags/types/tagBlock] and use
+ * any matching [bit-docs-process-tags/types/tag] in the
+ * [bit-docs-process-tags/types/tagCollection] to further process the line and
+ * return a new [bit-docs/types/docObject].
+ * 
+ * @param {bit-docs-process-tags/types/processTagsOptions} options
+ * 
+ * The block to process and the [bit-docs-process-tags/types/tagCollection].
+ * 
+ * Notable options:
+ * 
+ * - `tags`: [bit-docs-process-tags/types/tagCollection] to draw from.
+ * - `comment`: [bit-docs-process-tags/types/tagBlock] being processed.
  *
- * @param {documentjs.process.processOptions} options An options object that contains
- * the code and comment to process.
- *
- * @param {function(documentjs.process.docObject,documentjs.process.docObject)} callback(newDoc,newScope)
- *
- * A function that is called back with a docObject created from the code and the scope
- * `docObject`.  If
- * no docObject is created, `newDoc` will be null.
+ * @param {bit-docs/types/processorCallback} callback
+ * 
+ * Callback to call when done processing.
+ * 
+ * The new [bit-docs/types/docObject] might be null if no [bit-docs-process-tags/types/tag]s
+ * in the [bit-docs-process-tags/types/tagCollection] matched a line in the
+ * [bit-docs-process-tags/types/tagBlock].
  *
  * @body
  *
- * ## Processing rules
- *
- * The processing rules can be found in the [documentjs.Tag Tag interface].
+ * ## Use
+ * 
+ * This module manages a [bit-docs-process-tags/types/processTagsStack] using
+ * [bit-docs-process-tags/types/processTagsCommand] commands.
+ * 
+ * Plugins add to the [bit-docs-process-tags/types/tagCollection] using the
+ * `tags` hook so the [bit-docs-process-tags/types/tag] processing rules are applied when
+ * processing blocks.
  */
-
 module.exports = function(options, addDocObjectToDocMap){
 
 	var docObject = options.docObject || {},
@@ -35,7 +51,6 @@ module.exports = function(options, addDocObjectToDocMap){
 		docMap = options.docMap,
 		scope = options.scope,
 		tags = _.defaults(options.tags || {}, defaultTags);
-
 
 	var i = 0,
 		lines = typeof comment == 'string' ? comment.split("\n") : comment,

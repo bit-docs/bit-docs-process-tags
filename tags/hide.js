@@ -1,6 +1,6 @@
 /**
  * @parent bit-docs-process-tags/tags
- * @module {bit-docs/types/tag} bit-docs-process-tags/tags/hide @hide
+ * @module {bit-docs-process-tags/types/tag} bit-docs-process-tags/tags/hide @hide
  * 
  * Hides the comment from the navigation.
  * 

@@ -3,7 +3,7 @@ var endHTMLComment = /\s*-->/;
 
 /**
  * @parent bit-docs-process-tags/tags
- * @module {bit-docs/types/tag} bit-docs-process-tags/tags/body @body
+ * @module {bit-docs-process-tags/types/tag} bit-docs-process-tags/tags/body @body
  * 
  * @description 
  * 

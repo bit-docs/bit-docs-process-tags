@@ -11,22 +11,38 @@ var matchSpace = /^\s*/;
  *
  * @signature `processTags(options, callback)`
  *
- * Processes a comment and produces a [bit-docs/types/docObject] from the tags
- * found.
+ * Use this module to process a [bit-docs-process-tags/types/tagBlock] and use
+ * any matching [bit-docs-process-tags/types/tag] in the
+ * [bit-docs-process-tags/types/tagCollection] to further process the line and
+ * return a new [bit-docs/types/docObject].
+ * 
+ * @param {bit-docs-process-tags/types/processTagsOptions} options
+ * 
+ * The block to process and the [bit-docs-process-tags/types/tagCollection].
+ * 
+ * Notable options:
+ * 
+ * - `tags`: [bit-docs-process-tags/types/tagCollection] to draw from.
+ * - `comment`: [bit-docs-process-tags/types/tagBlock] being processed.
  *
- * @param {bit-docs/types/processOptions} options An options object that
- * contains the code and comment to process.
- *
- * @param {function(bit-docs/types/docObject,bit-docs/types/docObject)} callback(newDoc,newScope)
- *
- * A function that is called back with a [bit-docs/types/docObject] created from the code and
- * the scope `docObject`. If no [bit-docs/types/docObject] is created, `newDoc` will be null.
+ * @param {bit-docs/types/processorCallback} callback
+ * 
+ * Callback to call when done processing.
+ * 
+ * The new [bit-docs/types/docObject] might be null if no [bit-docs-process-tags/types/tag]s
+ * in the [bit-docs-process-tags/types/tagCollection] matched a line in the
+ * [bit-docs-process-tags/types/tagBlock].
  *
  * @body
  *
- * ## Processing rules
- *
- * The processing rules can be found in the [bit-docs/types/tag Tag interface].
+ * ## Use
+ * 
+ * This module manages a [bit-docs-process-tags/types/processTagsStack] using
+ * [bit-docs-process-tags/types/processTagsCommand] commands.
+ * 
+ * Plugins add to the [bit-docs-process-tags/types/tagCollection] using the
+ * `tags` hook so the [bit-docs-process-tags/types/tag] processing rules are applied when
+ * processing blocks.
  */
 module.exports = function(options, addDocObjectToDocMap){
 

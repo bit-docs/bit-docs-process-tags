@@ -6,6 +6,7 @@ var _ = require("lodash");
  * @parent plugins
  * @module {function} bit-docs-process-tags
  * @group bit-docs-process-tags/tags tags
+ * @group bit-docs-process-tags/types types
  * @group bit-docs-process-tags/modules modules
  *
  * @description Processes tags for a docMap.

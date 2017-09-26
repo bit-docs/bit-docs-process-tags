@@ -28,7 +28,7 @@
   "homepage": "https://github.com/bit-docs/bit-docs-process-tags#readme",
   "dependencies": {
     "lodash": "^4.13.1",
-    "bit-docs-type-annotate": "^0.0.1"
+    "bit-docs-type-annotate": "pre"
   },
   "devDependencies": {
     "mocha": ">= 1.18.0"
